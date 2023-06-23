@@ -1,0 +1,49 @@
+{
+  "Nodes": [
+    {
+      "Id": 1,
+      "Name": "Berlin"
+    },
+    {
+      "Id": 2,
+      "Name": "München"
+    },
+    {
+      "Id": 3,
+      "Name": "Stuttgart"
+    }
+    
+  ],
+  "Edges": [
+    {
+      "Id": 1,
+      "Cost": 3,
+      "Time": "00:00:20"
+    },
+    {
+      "Id":  2, 
+      "Cost": 6,
+      "Time": "00:00:30"
+    }
+  ],
+  "Connections": [
+    {
+      "Id": 1,
+      "EdgeId": 1,
+      "FirstNodeId": 1,
+      "SecondNodeId": 2
+    },
+    {
+      "Id": 2,
+      "EdgeId": 1,
+      "FirstNodeId": 1,
+      "SecondNodeId": 3
+    },
+    {
+      "Id": 3,
+      "EdgeId": 2,
+      "FirstNodeId": 2,
+      "SecondNodeId": 3
+    }
+  ]
+}

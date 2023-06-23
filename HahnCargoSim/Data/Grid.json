@@ -1,0 +1,248 @@
+{
+  "Nodes": [
+    {
+      "Id": 1,
+      "Name": "Berlin"
+    },
+    {
+      "Id": 2,
+      "Name": "München"
+    },
+    {
+      "Id": 3,
+      "Name": "Stuttgart"
+    },
+    {
+      "Id": 4,
+      "Name": "Potsdam"
+    },
+    {
+      "Id": 5,
+      "Name": "Bremen"
+    },
+    {
+      "Id": 6,
+      "Name": "Hamburg"
+    },
+    {
+      "Id": 7,
+      "Name": "Wiesbaden"
+    },
+    {
+      "Id": 8,
+      "Name": "Schwerin"
+    },
+    {
+      "Id": 9,
+      "Name": "Hannover"
+    },
+    {
+      "Id": 10,
+      "Name": "Düsseldorf"
+    },
+    {
+      "Id": 11,
+      "Name": "Mainz"
+    },
+    {
+      "Id": 12,
+      "Name": "Saarbrücken"
+    },
+    {
+      "Id": 13,
+      "Name": "Dresden"
+    },
+    {
+      "Id": 14,
+      "Name": "Magdeburg"
+    },
+    {
+      "Id": 15,
+      "Name": "Kiel"
+    },
+    {
+      "Id": 16,
+      "Name": "Erfurt"
+    }
+  ],
+  "Edges": [
+    {
+      "Id": 1,
+      "Cost": 19,
+      "Time": "00:01:20"
+    },
+    {
+
+      "Cost": 19,
+      "Time": "00:01:40"
+    },
+    {
+      "Id": 3,
+      "Cost": 20,
+      "Time": "00:01:30"
+    },
+    {
+      "Id": 4,
+      "Cost": 16,
+      "Time": "00:00:20"
+    },
+    {
+      "Id": 5,
+      "Cost": 17,
+      "Time": "00:01:10"
+    },
+    {
+      "Id": 6,
+      "Cost": 6,
+      "Time": "00:00:50"
+    },
+    {
+      "Id": 7,
+      "Cost": 18,
+      "Time": "00:00:30"
+    },
+    {
+      "Id": 8,
+      "Cost": 7,
+      "Time": "00:00:40"
+    },
+    {
+      "Id": 9,
+      "Cost": 3,
+      "Time": "00:00:20"
+    },
+    {
+      "Id": 10,
+      "Cost": 11,
+      "Time": "00:00:10"
+    }
+  ],
+  "Connections": [
+    {
+      "Id": 1,
+      "EdgeId": 3,
+      "FirstNodeId": 1,
+      "SecondNodeId": 4
+    },
+    {
+      "Id": 2,
+      "EdgeId": 3,
+      "FirstNodeId": 1,
+      "SecondNodeId": 8
+    },
+    {
+      "Id": 3,
+      "EdgeId": 4,
+      "FirstNodeId": 1,
+      "SecondNodeId": 12
+    },
+    {
+      "Id": 4,
+      "EdgeId": 4,
+      "FirstNodeId": 1,
+      "SecondNodeId": 14
+    },
+    {
+      "Id": 5,
+      "EdgeId": 6,
+      "FirstNodeId": 2,
+      "SecondNodeId": 12
+    },
+    {
+      "Id": 6,
+      "EdgeId": 5,
+      "FirstNodeId": 2,
+      "SecondNodeId": 11
+    },
+    {
+      "Id": 7,
+      "EdgeId": 5,
+      "FirstNodeId": 2,
+      "SecondNodeId": 10
+    },
+    {
+      "Id": 8,
+      "EdgeId": 9,
+      "FirstNodeId": 3,
+      "SecondNodeId": 12
+    },
+    {
+      "Id": 9,
+      "EdgeId": 7,
+      "FirstNodeId": 4,
+      "SecondNodeId": 10
+    },
+    {
+      "Id": 10,
+      "EdgeId": 8,
+      "FirstNodeId": 5,
+      "SecondNodeId": 3
+    },
+    {
+      "Id": 11,
+      "EdgeId": 3,
+      "FirstNodeId": 6,
+      "SecondNodeId": 15
+    },
+    {
+      "Id": 12,
+      "EdgeId": 9,
+      "FirstNodeId": 7,
+      "SecondNodeId": 10
+    },
+    {
+      "Id": 13,
+      "EdgeId": 3,
+      "FirstNodeId": 8,
+      "SecondNodeId": 10
+    },
+    {
+      "Id": 14,
+      "EdgeId": 2,
+      "FirstNodeId": 9,
+      "SecondNodeId": 5
+    },
+    {
+      "Id": 15,
+      "EdgeId": 6,
+      "FirstNodeId": 10,
+      "SecondNodeId": 5
+    },
+    {
+      "Id": 16,
+      "EdgeId": 1,
+      "FirstNodeId": 11,
+      "SecondNodeId": 10
+    },
+    {
+      "Id": 17,
+      "EdgeId": 7,
+      "FirstNodeId": 12,
+      "SecondNodeId": 10
+    },
+    {
+      "Id": 18,
+      "EdgeId": 3,
+      "FirstNodeId": 13,
+      "SecondNodeId": 12
+    },
+    {
+      "Id": 19,
+      "EdgeId": 8,
+      "FirstNodeId": 14,
+      "SecondNodeId": 10
+    },
+    {
+      "Id": 20,
+      "EdgeId": 10,
+      "FirstNodeId": 15,
+      "SecondNodeId": 8
+    },
+    {
+      "Id": 21,
+      "EdgeId": 5,
+      "FirstNodeId": 16,
+      "SecondNodeId": 11
+    }
+  ]
+}

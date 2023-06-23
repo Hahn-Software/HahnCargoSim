@@ -1,0 +1,468 @@
+{
+	"info": {
+		"_postman_id": "e28d9360-6449-43ef-95b7-4ec1c68ee762",
+		"name": "HahnCargoSim",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27741447"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Christian\",\r\n  \"password\": \"Hahn\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/User/Login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"User",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sim/Start",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/Sim/Start",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Sim",
+						"Start"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sim/Stop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/Sim/Stop",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Sim",
+						"Stop"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User/CoinAmount",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/User/CoinAmount",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"User",
+						"CoinAmount"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Grid/Get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/Grid/Get",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Grid",
+						"Get"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/Grid/GenerateFile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/Grid/GenerateFile?numberOfNodes=300&numberOfEdges=30&numberOfConnectionsPerNode=3&filename=\"\"",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Grid",
+						"GenerateFile"
+					],
+					"query": [
+						{
+							"key": "numberOfNodes",
+							"value": "300"
+						},
+						{
+							"key": "numberOfEdges",
+							"value": "30"
+						},
+						{
+							"key": "numberOfConnectionsPerNode",
+							"value": "3"
+						},
+						{
+							"key": "filename",
+							"value": "\"\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order/GetAllAvailable",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/Order/GetAllAvailable",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Order",
+						"GetAllAvailable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order/GetAllAccepted",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/Order/GetAllAccepted",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Order",
+						"GetAllAccepted"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order/Accept",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/Order/Accept?orderId=2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Order",
+						"Accept"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order/Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/Order/Create",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Order",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order/GenerateFile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/Order/GenerateFile?maxTicks=720&filename=BigGridOrders.json",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Order",
+						"GenerateFile"
+					],
+					"query": [
+						{
+							"key": "maxTicks",
+							"value": "720"
+						},
+						{
+							"key": "filename",
+							"value": "BigGridOrders.json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CargoTransporter/Get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/CargoTransporter/Get?transporterId=1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"CargoTransporter",
+						"Get"
+					],
+					"query": [
+						{
+							"key": "transporterId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CargoTransporter/Buy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/CargoTransporter/Buy?positionNodeId=0",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"CargoTransporter",
+						"Buy"
+					],
+					"query": [
+						{
+							"key": "positionNodeId",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CargoTransporter/Move",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/CargoTransporter/Move?transporterId=1&targetNodeId=2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"CargoTransporter",
+						"Move"
+					],
+					"query": [
+						{
+							"key": "transporterId",
+							"value": "1"
+						},
+						{
+							"key": "targetNodeId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IkNocmlzdGlhbiIsIm5iZiI6MTY4NTYwNTkwOCwiZXhwIjoxNjg2MjEwNzA4LCJpYXQiOjE2ODU2MDU5MDh9.NGH_UoS_cplqEgin_uS3zUJGBg0XucR33zt2tdjNp44",
+			"type": "string"
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:7115",
+			"type": "string"
+		}
+	]
+}
