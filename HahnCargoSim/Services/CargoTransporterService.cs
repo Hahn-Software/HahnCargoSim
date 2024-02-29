@@ -38,7 +38,7 @@ namespace HahnCargoSim.Services
       if (!cargoTransporters.ContainsKey(owner))
       {
         loggerService.Log($"{owner} got the starter cargo transporter");
-        return Create(owner); 
+        return Create(owner, positionNodeId); 
       }
 
       var coins = userService.GetCoinAmount(owner);
@@ -53,11 +53,11 @@ namespace HahnCargoSim.Services
       return Add(owner, positionNodeId);
     }
 
-    private int Create(string owner)
+    private int Create(string owner, int positionNodeId)
     {
       if (cargoTransporters.ContainsKey(owner)) return -1;
       cargoTransporters.Add(owner, new List<CargoTransporter>());
-      return Add(owner, gridService.GetGrid().Nodes[0].Id);
+      return Add(owner, positionNodeId);
     }
 
     private int Add(string owner, int positionNodeId)
