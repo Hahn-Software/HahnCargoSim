@@ -33,7 +33,7 @@ namespace HahnCargoSim.Services
 
     public int? ConnectionAvailable(int sourceNodeId, int targetNodeId)
     {
-      return (from connection in grid.Connections where (connection!.FirstNodeId == sourceNodeId && connection.SecondNodeId == targetNodeId) || (connection.FirstNodeId == targetNodeId && connection.SecondNodeId == sourceNodeId) select connection.Id).FirstOrDefault();
+      return (from connection in grid.Connections where (connection!.FirstNodeId == sourceNodeId && connection.SecondNodeId == targetNodeId) || (connection.FirstNodeId == targetNodeId && connection.SecondNodeId == sourceNodeId) select connection.Id).FirstOrDefault(-1);
     }
 
     public int GetConnectionCost(int connectionId)

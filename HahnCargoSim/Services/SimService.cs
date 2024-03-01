@@ -71,9 +71,9 @@ namespace HahnCargoSim.Services
       if (startNode == null) return false;
 
       var connectionId = gridService.ConnectionAvailable(startNode.Id, moveOrder.TargetNodeId);
-      if (connectionId == null) return false;
+      if (connectionId == -1) return false;
 
-      var travelCost = gridService.GetConnectionCost((int)connectionId);
+      var travelCost = gridService.GetConnectionCost((int)connectionId!);
       if(userService.GetCoinAmount(moveOrder.Owner) - travelCost < 0) return false;
 
 
