@@ -28,6 +28,6 @@ The endpoint should be self-explainable, but here are some hints:
 * When you use the User/Login endpoint, you can pick your own username. But the password is always “Hahn”. You will get a JWT that can be used to access the other endpoints. 
 * With the GenerateFile Enpoint for Grid and Orders you can create more test data. But the two enpoints shoud also not be called by your automation process.  
 
-The simulation server should not be changed. It is “legacy” on purpose. But if you think you found a bug, please let us know. 
+The simulation server should not be changed. It is “legacy” on purpose. But if you think you found a bug, please let us know (best open up an issue here on git). 
 
 The repo also contains a postman collection to test the server endpoints. 
