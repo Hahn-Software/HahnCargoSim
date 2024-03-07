@@ -7,14 +7,24 @@ Your job is to automate your cargo transporter – and to make more coins!
 
 ## The challenge: 
 
-We want you to write a frontend in either Angular or React, that allows you to log into the “Hahn Cargo Simulation”. After the login there should be an option to start / stop the simulation and to create Orders (for debug purposes). Also, this frontend should visualize what your transporter automation in the backend is doing. 
-
-When the simulation is started, your program (written in .Net6 or above) should automate everything from accepting orders and moving transporters, to buying new transporters. All that can be done by using the simulations API.
-So just hit start and watch your program make coins. 
-
-Your Application should be startable with a docker-compose and checkable. It also should have a repository with a git history.  
-
-Finally, record a video declaring your application (in english).
+We want you to write an application (back- and frontend), that uses the given simulation api. Your backend, written in .net6 or above, should handle the following use cases:
+- Receive orders via RabbitMQ and decide on accepting them or not.
+- Navigate transporters to fulfill the accepted orders.
+- Buy new transporters, when it is beneficial.
+ 
+The backend should implement your strategy to do all the use cases automatically, without required interactions from a user. The overall goal of this strategy is of course to earn coins.
+ 
+Your frontend write in either Angular or React, should allow the user to log into the “Hahn Cargo Simulation”.
+After the login there should be an option to start / stop the simulation. (There can be other options for debug purposes e.g. to create Orders.)
+When the simulation is started, the frontend should visualize what your automation in the backend is doing. Feel free to display what you think is great for a user, but at a minimum we want to see the updating coin amount, the owned transporter and there status, as well as the accepted orders.
+ 
+Your Application should be start able with a docker-compose and checkable. It also should have a repository with a git history.
+ 
+Finally, record a video declaring your application (in English).
+ 
+Additional remarks:
+- Your application will most likely look somewhat like this: [Hahn Server] <-> [your backend] <-> [your frontend]
+- We know that there are a lot of packages available. But choose them carefully, since we want to hire you, not the package author.
 
 ## The technical background: 
 
